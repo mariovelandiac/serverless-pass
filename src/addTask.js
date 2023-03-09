@@ -1,12 +1,14 @@
 const {v4} = require('uuid');
 const AWS = require('aws-sdk');
+const middy = require('@middy/core');
+const jsonBodyParser = require('@middy/http-json-body-parser');
 
 async function addTask(event) {
 
     // Conexión a la base de datos a través de aws con el access key dado al comienzo del proyecto
     const dynamodb = new AWS.DynamoDB.DocumentClient(); 
 
-    const {title, description} = JSON.parse(event.body); // parsear string a JSON
+    const {title, description} = event.body; // parsear string a JSON
     const createdAt = new Date();
     const id = v4(); // creación del id
 
@@ -29,5 +31,5 @@ async function addTask(event) {
 };
 
 module.exports = {
-    addTask
+    addTask: middy(addTask).use(jsonBodyParser())
 };

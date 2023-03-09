@@ -18,6 +18,8 @@
   },
   "homepage": "https://github.com/mariovelandiac/serverless-pass#readme",
   "dependencies": {
+    "@middy/core": "^4.2.6",
+    "@middy/http-json-body-parser": "^4.2.6",
     "aws-sdk": "^2.1331.0",
     "uuid": "^9.0.0"
   }
