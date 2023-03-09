@@ -2,11 +2,23 @@
   "name": "serverless-pass",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "src/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariovelandiac/serverless-pass.git"
+  },
   "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "author": "Mario Velandia Ciendúa <mariovelandiac>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mariovelandiac/serverless-pass/issues"
+  },
+  "homepage": "https://github.com/mariovelandiac/serverless-pass#readme",
+  "dependencies": {
+    "aws-sdk": "^2.1331.0",
+    "uuid": "^9.0.0"
+  }
 }

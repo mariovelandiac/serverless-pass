@@ -145,5 +145,9 @@ dist
 # Credentials
 credentials.txt
 
+# Serverless directories
+.serverless
+
+
 
 # End of https://www.toptal.com/developers/gitignore/api/node
